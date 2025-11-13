@@ -1,42 +1,225 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.header {
+  background-color: #1e1e2f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #ff7f50;
+}
+
+.home {
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.home p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.home-sections section {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 280px;
+  transition: transform 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+.home-sections section:hover {
+  transform: translateY(-5px);
 }
 
-.read-the-docs {
-  color: #888;
+.home-sections h2 {
+  color: #1e1e2f;
+  margin-bottom: 0.5rem;
+}
+
+.about {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h1 {
+  font-size: 2rem;
+  color: #1e1e2f;
+  margin-bottom: 1rem;
+}
+
+.about h2 {
+  color: #ff7f50;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about ul {
+  list-style: square inside;
+  padding-left: 1rem;
+}
+
+.projects {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.projects h1 {
+  margin-bottom: 2rem;
+}
+
+.projects ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.projects li {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.projects li:hover {
+  transform: translateY(-5px);
+}
+
+.projects a {
+  color: #ff7f50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.projects a:hover {
+  text-decoration: underline;
+}
+
+
+.contact {
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 500;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+
+button:hover {
+  background: #ff7f50;
+}
+
+
+footer {
+  background-color: #1e1e2f;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+}
+
+footer div {
+  margin-top: 0.5rem;
+}
+
+footer a {
+  color: #ff7f50;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
